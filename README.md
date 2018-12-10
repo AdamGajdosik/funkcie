@@ -1,0 +1,2 @@
+# funkcie
+vlastné funkcie
