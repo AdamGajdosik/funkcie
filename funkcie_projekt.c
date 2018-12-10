@@ -52,19 +52,25 @@ char *male_pismena(char* x)
         }
 }
 
-/*char *nacitaj_string()
+char *nacitaj_string()
 {
     char x[500],*pole,i=0;
-    gets(x);
-    pole=(char*) malloc((strlen(x)+1)*sizeof(char));
+    fgets(x,500,stdin);
+    pole=(char*) malloc((strlen(x))*sizeof(char));
     for(i=0;i<=strlen(x);i++)
+        {
+            if(x[i]=='\n')
+                x[i]='\0';
             pole[i]=x[i];
+            if(x[i]=='\0')
+                break;
+        }
     return pole;
-}*/
+}
 
 int main()
 {
     char *n;
-    //n=nacitaj_string();
+    n=nacitaj_string();
     printf("%s\n",n);
 }
