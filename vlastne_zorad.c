@@ -27,6 +27,7 @@ int *zorad(int *pole,int pocet)
     }
     for(i=0;i<pocet;i++)
         pole[i]=pole_tmp[i];
+    for(i=0;i<pocet;i++)
     free(pole_tmp);
     return pole;
 }
@@ -54,6 +55,6 @@ int main()
     scanf("%d",&pocet);
     pole=nacitaj_pole_int(pocet);
     pole=zorad(pole,pocet);
-    vypis_pole_int(pole,pocet);
+    //vypis_pole_int(pole,pocet);
     return 0;
 }
